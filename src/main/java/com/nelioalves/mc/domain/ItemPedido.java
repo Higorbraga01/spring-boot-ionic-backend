@@ -6,8 +6,10 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
+@DynamicUpdate
 public class ItemPedido implements Serializable {
 	private static final long serialVersionUID = 1L;
 	

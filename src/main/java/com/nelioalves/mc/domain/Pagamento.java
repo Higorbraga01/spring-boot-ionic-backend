@@ -13,10 +13,12 @@ import javax.persistence.OneToOne;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.nelioalves.mc.domain.enums.EstadoPagamento;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "@type")
+@DynamicUpdate
 public abstract class Pagamento implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

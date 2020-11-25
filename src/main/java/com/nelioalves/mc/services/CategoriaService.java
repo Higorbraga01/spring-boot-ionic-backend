@@ -15,8 +15,10 @@ import com.nelioalves.mc.dto.CategoriaDTO;
 import com.nelioalves.mc.repositories.CategoriaRepository;
 import com.nelioalves.mc.services.exceptions.DataIntegrityException;
 import com.nelioalves.mc.services.exceptions.ObjectNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(readOnly=true)
 public class CategoriaService {
 	
 	@Autowired

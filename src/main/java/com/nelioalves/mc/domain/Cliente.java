@@ -18,8 +18,10 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.nelioalves.mc.domain.enums.TipoCliente;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
+@DynamicUpdate
 public class Cliente implements Serializable{
 	private static final long serialVersionUID = 1L;
 

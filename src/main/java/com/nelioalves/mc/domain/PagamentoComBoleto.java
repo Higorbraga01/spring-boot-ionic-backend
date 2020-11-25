@@ -7,9 +7,11 @@ import javax.persistence.Entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.nelioalves.mc.domain.enums.EstadoPagamento;
+import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @JsonTypeName("pagamentoComBoleto")
+@DynamicUpdate
 public class PagamentoComBoleto extends Pagamento{
 	private static final long serialVersionUID = 1L;
 	
