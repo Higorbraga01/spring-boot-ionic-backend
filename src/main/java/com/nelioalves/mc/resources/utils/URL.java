@@ -1,10 +1,12 @@
 package com.nelioalves.mc.resources.utils;
 
+import lombok.NoArgsConstructor;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
-
+@NoArgsConstructor
 public class URL {
 
 	public static String decodeParam(String s) {

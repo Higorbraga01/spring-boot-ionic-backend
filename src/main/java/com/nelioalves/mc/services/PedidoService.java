@@ -14,8 +14,10 @@ import com.nelioalves.mc.repositories.ItemPedidoRepository;
 import com.nelioalves.mc.repositories.PagamentoRepository;
 import com.nelioalves.mc.repositories.PedidoRepository;
 import com.nelioalves.mc.services.exceptions.ObjectNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(readOnly=true)
 public class PedidoService {
 	
 	@Autowired

@@ -1,5 +1,7 @@
 package com.nelioalves.mc.domain;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 import java.io.Serializable;
 
 import javax.persistence.Embeddable;
@@ -7,6 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Embeddable
+@DynamicUpdate
 public class itemPedidoPK implements Serializable{
 	private static final long serialVersionUID = 1L;
 	

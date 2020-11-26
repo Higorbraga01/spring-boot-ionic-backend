@@ -6,8 +6,10 @@ import java.util.Date;
 import org.springframework.stereotype.Service;
 
 import com.nelioalves.mc.domain.PagamentoComBoleto;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(readOnly=true)
 public class BoletoService {
 
 	public void preencherPagamentoComBoleto(PagamentoComBoleto pagto, Date instanteDoPedido) {

@@ -29,8 +29,10 @@ import com.nelioalves.mc.repositories.ItemPedidoRepository;
 import com.nelioalves.mc.repositories.PagamentoRepository;
 import com.nelioalves.mc.repositories.PedidoRepository;
 import com.nelioalves.mc.repositories.ProdutoRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(readOnly=true)
 public class DBService {
 	
 	@Autowired

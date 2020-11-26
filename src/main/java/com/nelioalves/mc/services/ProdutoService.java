@@ -14,8 +14,10 @@ import com.nelioalves.mc.domain.Produto;
 import com.nelioalves.mc.repositories.CategoriaRepository;
 import com.nelioalves.mc.repositories.ProdutoRepository;
 import com.nelioalves.mc.services.exceptions.ObjectNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional(readOnly=true)
 public class ProdutoService {
 
 	@Autowired
